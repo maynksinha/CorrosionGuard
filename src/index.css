@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-steel-dark bg-neutral-light;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-rust-primary hover:bg-rust-dark text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-steel-primary hover:bg-steel-dark text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border border-steel-primary text-steel-primary hover:bg-steel-primary hover:text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-steel-dark;
+  }
+
+  .section-subheading {
+    @apply text-xl md:text-2xl font-medium mb-10 text-neutral-dark max-w-3xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg;
+  }
+}
+
+/* Animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.staggered-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.staggered-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.staggered-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.staggered-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* Parallax effect */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
